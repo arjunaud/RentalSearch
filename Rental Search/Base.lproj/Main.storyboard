@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Startup View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="StartupViewController" id="BYZ-38-t0r" customClass="StartupViewController" customModule="Rental_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rental Search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uO-EL-uXg">
+                                <rect key="frame" x="20" y="71" width="374" height="51.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JKq-nU-XLF">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1uO-EL-uXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0UG-0g-SRL"/>
+                            <constraint firstItem="JKq-nU-XLF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="YdE-gR-gWD"/>
+                            <constraint firstItem="JKq-nU-XLF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YtA-AH-PKJ"/>
+                            <constraint firstItem="1uO-EL-uXg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="fQH-lV-mpv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1uO-EL-uXg" secondAttribute="trailing" constant="20" id="ori-pC-8Mp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="JKq-nU-XLF" id="nWq-nf-04C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="84.375"/>
+        </scene>
+        <!--Rental Location Selection View Controller-->
+        <scene sceneID="GZt-L3-mzT">
+            <objects>
+                <viewController storyboardIdentifier="RentalLocationSelectionViewController" id="kyU-yv-icE" customClass="RentalLocationSelectionViewController" customModule="Rental_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rbo-up-imz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="v9f-m9-sGq">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcw-Dw-9d2">
+                                <rect key="frame" x="0.0" y="345" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kyU-yv-icE" id="lcm-8v-X4f"/>
+                                    <outlet property="delegate" destination="kyU-yv-icE" id="4Tg-fN-2WL"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmh-Bs-1NC">
+                                <rect key="frame" x="180" y="811" width="54" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="kyU-yv-icE" eventType="touchUpInside" id="QoC-iz-mqi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JZy-IH-hCF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vcw-Dw-9d2" firstAttribute="centerY" secondItem="JZy-IH-hCF" secondAttribute="centerY" id="8rJ-aS-Ud8"/>
+                            <constraint firstItem="Vcw-Dw-9d2" firstAttribute="leading" secondItem="JZy-IH-hCF" secondAttribute="leading" id="9vd-8v-Sc5"/>
+                            <constraint firstItem="v9f-m9-sGq" firstAttribute="centerX" secondItem="JZy-IH-hCF" secondAttribute="centerX" id="OXO-3p-7Kw"/>
+                            <constraint firstItem="JZy-IH-hCF" firstAttribute="bottom" secondItem="jmh-Bs-1NC" secondAttribute="bottom" constant="20" id="TBn-XC-NU0"/>
+                            <constraint firstItem="JZy-IH-hCF" firstAttribute="trailing" secondItem="Vcw-Dw-9d2" secondAttribute="trailing" id="UYk-n3-3oI"/>
+                            <constraint firstItem="jmh-Bs-1NC" firstAttribute="centerX" secondItem="JZy-IH-hCF" secondAttribute="centerX" id="VIW-8E-C6C"/>
+                            <constraint firstItem="v9f-m9-sGq" firstAttribute="centerY" secondItem="JZy-IH-hCF" secondAttribute="centerY" id="VbM-tL-ABi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="v9f-m9-sGq" id="VFB-Oa-WON"/>
+                        <outlet property="locationSelectionView" destination="Vcw-Dw-9d2" id="MK4-dn-HDa"/>
+                        <outlet property="nextButton" destination="jmh-Bs-1NC" id="eNL-tG-VqF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LHd-OT-t0s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="-21"/>
+        </scene>
+        <!--Rental Room Selection View Controller-->
+        <scene sceneID="a1T-qN-1Cc">
+            <objects>
+                <viewController storyboardIdentifier="RentalRoomSelectionViewController" id="VmQ-mQ-g4b" customClass="RentalRoomSelectionViewController" customModule="Rental_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vfI-C4-zo4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQ5-pb-DbA">
+                                <rect key="frame" x="0.0" y="345" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VmQ-mQ-g4b" id="emA-CM-udq"/>
+                                    <outlet property="delegate" destination="VmQ-mQ-g4b" id="she-D0-AAX"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWD-MI-ZJx">
+                                <rect key="frame" x="180" y="811" width="54" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="VmQ-mQ-g4b" eventType="touchUpInside" id="ab5-uh-0h8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hcy-p9-c0Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hcy-p9-c0Z" firstAttribute="bottom" secondItem="GWD-MI-ZJx" secondAttribute="bottom" constant="20" id="448-iQ-BS2"/>
+                            <constraint firstItem="CQ5-pb-DbA" firstAttribute="leading" secondItem="Hcy-p9-c0Z" secondAttribute="leading" id="7rP-fd-jxe"/>
+                            <constraint firstItem="CQ5-pb-DbA" firstAttribute="centerY" secondItem="Hcy-p9-c0Z" secondAttribute="centerY" id="RgF-sP-aJD"/>
+                            <constraint firstItem="GWD-MI-ZJx" firstAttribute="centerX" secondItem="Hcy-p9-c0Z" secondAttribute="centerX" id="pHC-A6-VC1"/>
+                            <constraint firstItem="Hcy-p9-c0Z" firstAttribute="trailing" secondItem="CQ5-pb-DbA" secondAttribute="trailing" id="zYk-ti-d4L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="roomsPickerView" destination="CQ5-pb-DbA" id="bbV-mv-If6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F30-Mm-lAJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-648" y="535"/>
+        </scene>
+        <!--Rental Search Results View Controller-->
+        <scene sceneID="2kS-10-Dil">
+            <objects>
+                <viewController storyboardIdentifier="RentalSearchResultsViewController" id="leG-QT-Hx5" customClass="RentalSearchResultsViewController" customModule="Rental_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L2t-WA-MRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IyT-6j-UPd">
+                                <rect key="frame" x="0.0" y="64" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalSearchResultViewCell" rowHeight="101" id="4hB-7R-kyr" customClass="RentalSearchResultViewCell" customModule="Rental_Search" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4hB-7R-kyr" id="D8T-70-ssI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3gx-St-NeH">
+                                                    <rect key="frame" x="20" y="8" width="156.5" height="85"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Building Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esP-bz-oN5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="156.5" height="30"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLB-uA-LYk">
+                                                            <rect key="frame" x="0.0" y="38" width="35" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeZ-kP-QMw">
+                                                            <rect key="frame" x="0.0" y="66.5" width="62.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3gx-St-NeH" firstAttribute="leading" secondItem="D8T-70-ssI" secondAttribute="leading" constant="20" symbolic="YES" id="1yr-ql-07n"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3gx-St-NeH" secondAttribute="trailing" constant="20" id="Li7-O3-8Se"/>
+                                                <constraint firstItem="3gx-St-NeH" firstAttribute="top" secondItem="D8T-70-ssI" secondAttribute="top" constant="8" id="grn-32-iPv"/>
+                                                <constraint firstAttribute="bottom" secondItem="3gx-St-NeH" secondAttribute="bottom" constant="8" id="qYe-R6-Czj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="CeZ-kP-QMw" id="NSw-fH-dgK"/>
+                                            <outlet property="buildingNameLabel" destination="esP-bz-oN5" id="k5b-fr-El9"/>
+                                            <outlet property="rentLabel" destination="QLB-uA-LYk" id="2vA-YZ-u5G"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="leG-QT-Hx5" id="aDh-e9-lrg"/>
+                                    <outlet property="delegate" destination="leG-QT-Hx5" id="QdD-o6-RTY"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="BQV-7q-oeF">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IWX-io-d17"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IWX-io-d17" firstAttribute="trailing" secondItem="IyT-6j-UPd" secondAttribute="trailing" id="5PD-sw-jP1"/>
+                            <constraint firstItem="BQV-7q-oeF" firstAttribute="centerY" secondItem="IWX-io-d17" secondAttribute="centerY" id="8FE-gj-beF"/>
+                            <constraint firstItem="IyT-6j-UPd" firstAttribute="bottom" secondItem="IWX-io-d17" secondAttribute="bottom" constant="20" id="D5I-fQ-VzT"/>
+                            <constraint firstItem="BQV-7q-oeF" firstAttribute="centerX" secondItem="IWX-io-d17" secondAttribute="centerX" id="FTK-L2-dH2"/>
+                            <constraint firstItem="IyT-6j-UPd" firstAttribute="leading" secondItem="IWX-io-d17" secondAttribute="leading" id="HVX-BG-EHi"/>
+                            <constraint firstItem="IyT-6j-UPd" firstAttribute="top" secondItem="IWX-io-d17" secondAttribute="top" constant="20" id="y6Z-iD-dJH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="BQV-7q-oeF" id="73C-Jx-dRx"/>
+                        <outlet property="rentSearchResultsTableView" destination="IyT-6j-UPd" id="Xuc-LK-Ar1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNB-39-SNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515.94202898550725" y="750.66964285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

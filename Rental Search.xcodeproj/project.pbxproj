@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C73AE70D2A2F58C80093F95C /* RentalSeachResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AE70C2A2F58C80093F95C /* RentalSeachResultsViewModel.swift */; };
+		C73AE70F2A2F58F70093F95C /* RentalSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AE70E2A2F58F70093F95C /* RentalSearchResult.swift */; };
+		C73AE7112A2F59110093F95C /* RentalSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AE7102A2F59110093F95C /* RentalSearchResultsViewController.swift */; };
+		C73AE7132A2F59A70093F95C /* RentalSearchResultsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AE7122A2F59A70093F95C /* RentalSearchResultsRepo.swift */; };
+		C73AE7152A2F5A420093F95C /* RentalSearchResultViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AE7142A2F5A420093F95C /* RentalSearchResultViewCell.swift */; };
+		C7608CF929EB1258009F909B /* RentalWizardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608CF829EB1258009F909B /* RentalWizardRouter.swift */; };
+		C7608CFB29ED45D9009F909B /* RentalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608CFA29ED45D9009F909B /* RentalData.swift */; };
+		C7608CFF29ED4853009F909B /* RentRangeSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608CFE29ED4853009F909B /* RentRangeSelectionRouter.swift */; };
+		C7608D0129ED48A4009F909B /* RentRoomSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D0029ED48A4009F909B /* RentRoomSelectionRouter.swift */; };
+		C7608D0329ED57E0009F909B /* RentalSearchResultsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D0229ED57E0009F909B /* RentalSearchResultsRouter.swift */; };
+		C7608D0929ED95FD009F909B /* RentLocationRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D0829ED95FD009F909B /* RentLocationRepo.swift */; };
+		C7608D0D29F462B6009F909B /* RentalRoomSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D0C29F462B6009F909B /* RentalRoomSelectionViewController.swift */; };
+		C7608D1929FEACE0009F909B /* RentalLocationSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D1629FEACE0009F909B /* RentalLocationSelectionRouter.swift */; };
+		C7608D1A29FEACE0009F909B /* RentalLocationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D1729FEACE0009F909B /* RentalLocationSelectionViewController.swift */; };
+		C7608D1B29FEACE0009F909B /* RentalLocationSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D1829FEACE0009F909B /* RentalLocationSelectionViewModel.swift */; };
+		C7608D2029FEACE9009F909B /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D1D29FEACE9009F909B /* StartupViewController.swift */; };
+		C7608D2129FEACE9009F909B /* StartupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D1E29FEACE9009F909B /* StartupViewModel.swift */; };
+		C7608D2229FEACE9009F909B /* StartupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D1F29FEACE9009F909B /* StartupRouter.swift */; };
+		C7608D2429FEE931009F909B /* RentRoomSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D2329FEE931009F909B /* RentRoomSelectionViewModel.swift */; };
+		C7C4AE8E29E8319800AFD322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4AE8D29E8319800AFD322 /* AppDelegate.swift */; };
+		C7C4AE9029E8319800AFD322 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4AE8F29E8319800AFD322 /* SceneDelegate.swift */; };
+		C7C4AE9529E8319800AFD322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C4AE9329E8319800AFD322 /* Main.storyboard */; };
+		C7C4AE9729E8319900AFD322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C4AE9629E8319900AFD322 /* Assets.xcassets */; };
+		C7C4AE9A29E8319900AFD322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C4AE9829E8319900AFD322 /* LaunchScreen.storyboard */; };
+		C7C4AEA429E833C400AFD322 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4AEA329E833C400AFD322 /* Router.swift */; };
+		C7C4AEA829E8357200AFD322 /* ABVariantRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4AEA729E8357200AFD322 /* ABVariantRepo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C73AE70C2A2F58C80093F95C /* RentalSeachResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalSeachResultsViewModel.swift; sourceTree = "<group>"; };
+		C73AE70E2A2F58F70093F95C /* RentalSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalSearchResult.swift; sourceTree = "<group>"; };
+		C73AE7102A2F59110093F95C /* RentalSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalSearchResultsViewController.swift; sourceTree = "<group>"; };
+		C73AE7122A2F59A70093F95C /* RentalSearchResultsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalSearchResultsRepo.swift; sourceTree = "<group>"; };
+		C73AE7142A2F5A420093F95C /* RentalSearchResultViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalSearchResultViewCell.swift; sourceTree = "<group>"; };
+		C7608CF829EB1258009F909B /* RentalWizardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalWizardRouter.swift; sourceTree = "<group>"; };
+		C7608CFA29ED45D9009F909B /* RentalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalData.swift; sourceTree = "<group>"; };
+		C7608CFE29ED4853009F909B /* RentRangeSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRangeSelectionRouter.swift; sourceTree = "<group>"; };
+		C7608D0029ED48A4009F909B /* RentRoomSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRoomSelectionRouter.swift; sourceTree = "<group>"; };
+		C7608D0229ED57E0009F909B /* RentalSearchResultsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalSearchResultsRouter.swift; sourceTree = "<group>"; };
+		C7608D0829ED95FD009F909B /* RentLocationRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentLocationRepo.swift; sourceTree = "<group>"; };
+		C7608D0C29F462B6009F909B /* RentalRoomSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalRoomSelectionViewController.swift; sourceTree = "<group>"; };
+		C7608D1629FEACE0009F909B /* RentalLocationSelectionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentalLocationSelectionRouter.swift; sourceTree = "<group>"; };
+		C7608D1729FEACE0009F909B /* RentalLocationSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentalLocationSelectionViewController.swift; sourceTree = "<group>"; };
+		C7608D1829FEACE0009F909B /* RentalLocationSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentalLocationSelectionViewModel.swift; sourceTree = "<group>"; };
+		C7608D1D29FEACE9009F909B /* StartupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		C7608D1E29FEACE9009F909B /* StartupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupViewModel.swift; sourceTree = "<group>"; };
+		C7608D1F29FEACE9009F909B /* StartupRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupRouter.swift; sourceTree = "<group>"; };
+		C7608D2329FEE931009F909B /* RentRoomSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRoomSelectionViewModel.swift; sourceTree = "<group>"; };
+		C7C4AE8A29E8319800AFD322 /* Rental Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rental Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C4AE8D29E8319800AFD322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7C4AE8F29E8319800AFD322 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C7C4AE9429E8319800AFD322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7C4AE9629E8319900AFD322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7C4AE9929E8319900AFD322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7C4AE9B29E8319900AFD322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7C4AEA329E833C400AFD322 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C7C4AEA729E8357200AFD322 /* ABVariantRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVariantRepo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7C4AE8729E8319800AFD322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C73AE70B2A2F586A0093F95C /* RentalSearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				C7608D0229ED57E0009F909B /* RentalSearchResultsRouter.swift */,
+				C73AE70C2A2F58C80093F95C /* RentalSeachResultsViewModel.swift */,
+				C73AE70E2A2F58F70093F95C /* RentalSearchResult.swift */,
+				C73AE7102A2F59110093F95C /* RentalSearchResultsViewController.swift */,
+				C73AE7122A2F59A70093F95C /* RentalSearchResultsRepo.swift */,
+				C73AE7142A2F5A420093F95C /* RentalSearchResultViewCell.swift */,
+			);
+			path = RentalSearchResults;
+			sourceTree = "<group>";
+		};
+		C73AE7162A2FA63B0093F95C /* Rental Wizard */ = {
+			isa = PBXGroup;
+			children = (
+				C7608CF829EB1258009F909B /* RentalWizardRouter.swift */,
+			);
+			path = "Rental Wizard";
+			sourceTree = "<group>";
+		};
+		C73AE7172A2FA65C0093F95C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C7608CFA29ED45D9009F909B /* RentalData.swift */,
+				C7C4AEA329E833C400AFD322 /* Router.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C7608D1429FEAC82009F909B /* RoomSelection */ = {
+			isa = PBXGroup;
+			children = (
+				C7608D0C29F462B6009F909B /* RentalRoomSelectionViewController.swift */,
+				C7608D0029ED48A4009F909B /* RentRoomSelectionRouter.swift */,
+				C7608D2329FEE931009F909B /* RentRoomSelectionViewModel.swift */,
+			);
+			path = RoomSelection;
+			sourceTree = "<group>";
+		};
+		C7608D1529FEACE0009F909B /* LocationSelection */ = {
+			isa = PBXGroup;
+			children = (
+				C7608D0829ED95FD009F909B /* RentLocationRepo.swift */,
+				C7608D1629FEACE0009F909B /* RentalLocationSelectionRouter.swift */,
+				C7608D1729FEACE0009F909B /* RentalLocationSelectionViewController.swift */,
+				C7608D1829FEACE0009F909B /* RentalLocationSelectionViewModel.swift */,
+			);
+			path = LocationSelection;
+			sourceTree = "<group>";
+		};
+		C7608D1C29FEACE9009F909B /* AppStartup */ = {
+			isa = PBXGroup;
+			children = (
+				C7608D1D29FEACE9009F909B /* StartupViewController.swift */,
+				C7C4AEA729E8357200AFD322 /* ABVariantRepo.swift */,
+				C7608D1E29FEACE9009F909B /* StartupViewModel.swift */,
+				C7608D1F29FEACE9009F909B /* StartupRouter.swift */,
+			);
+			path = AppStartup;
+			sourceTree = "<group>";
+		};
+		C7C4AE8129E8319800AFD322 = {
+			isa = PBXGroup;
+			children = (
+				C7C4AE8C29E8319800AFD322 /* Rental Search */,
+				C7C4AE8B29E8319800AFD322 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7C4AE8B29E8319800AFD322 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7C4AE8A29E8319800AFD322 /* Rental Search.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7C4AE8C29E8319800AFD322 /* Rental Search */ = {
+			isa = PBXGroup;
+			children = (
+				C7608D1429FEAC82009F909B /* RoomSelection */,
+				C7608D1C29FEACE9009F909B /* AppStartup */,
+				C7608D1529FEACE0009F909B /* LocationSelection */,
+				C73AE70B2A2F586A0093F95C /* RentalSearchResults */,
+				C73AE7172A2FA65C0093F95C /* Common */,
+				C73AE7162A2FA63B0093F95C /* Rental Wizard */,
+				C7C4AE8F29E8319800AFD322 /* SceneDelegate.swift */,
+				C7C4AE8D29E8319800AFD322 /* AppDelegate.swift */,
+				C7608CFE29ED4853009F909B /* RentRangeSelectionRouter.swift */,
+				C7C4AE9329E8319800AFD322 /* Main.storyboard */,
+				C7C4AE9629E8319900AFD322 /* Assets.xcassets */,
+				C7C4AE9829E8319900AFD322 /* LaunchScreen.storyboard */,
+				C7C4AE9B29E8319900AFD322 /* Info.plist */,
+			);
+			path = "Rental Search";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7C4AE8929E8319800AFD322 /* Rental Search */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7C4AE9E29E8319900AFD322 /* Build configuration list for PBXNativeTarget "Rental Search" */;
+			buildPhases = (
+				C7C4AE8629E8319800AFD322 /* Sources */,
+				C7C4AE8729E8319800AFD322 /* Frameworks */,
+				C7C4AE8829E8319800AFD322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rental Search";
+			productName = "Rental Search";
+			productReference = C7C4AE8A29E8319800AFD322 /* Rental Search.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7C4AE8229E8319800AFD322 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					C7C4AE8929E8319800AFD322 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = C7C4AE8529E8319800AFD322 /* Build configuration list for PBXProject "Rental Search" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7C4AE8129E8319800AFD322;
+			productRefGroup = C7C4AE8B29E8319800AFD322 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7C4AE8929E8319800AFD322 /* Rental Search */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7C4AE8829E8319800AFD322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C4AE9A29E8319900AFD322 /* LaunchScreen.storyboard in Resources */,
+				C7C4AE9729E8319900AFD322 /* Assets.xcassets in Resources */,
+				C7C4AE9529E8319800AFD322 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7C4AE8629E8319800AFD322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7608D2129FEACE9009F909B /* StartupViewModel.swift in Sources */,
+				C7608CFB29ED45D9009F909B /* RentalData.swift in Sources */,
+				C73AE7132A2F59A70093F95C /* RentalSearchResultsRepo.swift in Sources */,
+				C73AE70F2A2F58F70093F95C /* RentalSearchResult.swift in Sources */,
+				C7608CFF29ED4853009F909B /* RentRangeSelectionRouter.swift in Sources */,
+				C7608CF929EB1258009F909B /* RentalWizardRouter.swift in Sources */,
+				C7C4AEA429E833C400AFD322 /* Router.swift in Sources */,
+				C7608D2029FEACE9009F909B /* StartupViewController.swift in Sources */,
+				C73AE7152A2F5A420093F95C /* RentalSearchResultViewCell.swift in Sources */,
+				C7608D1929FEACE0009F909B /* RentalLocationSelectionRouter.swift in Sources */,
+				C7608D2229FEACE9009F909B /* StartupRouter.swift in Sources */,
+				C7608D0D29F462B6009F909B /* RentalRoomSelectionViewController.swift in Sources */,
+				C7608D0929ED95FD009F909B /* RentLocationRepo.swift in Sources */,
+				C7C4AE8E29E8319800AFD322 /* AppDelegate.swift in Sources */,
+				C7608D1B29FEACE0009F909B /* RentalLocationSelectionViewModel.swift in Sources */,
+				C73AE7112A2F59110093F95C /* RentalSearchResultsViewController.swift in Sources */,
+				C73AE70D2A2F58C80093F95C /* RentalSeachResultsViewModel.swift in Sources */,
+				C7608D1A29FEACE0009F909B /* RentalLocationSelectionViewController.swift in Sources */,
+				C7608D0329ED57E0009F909B /* RentalSearchResultsRouter.swift in Sources */,
+				C7608D0129ED48A4009F909B /* RentRoomSelectionRouter.swift in Sources */,
+				C7C4AEA829E8357200AFD322 /* ABVariantRepo.swift in Sources */,
+				C7608D2429FEE931009F909B /* RentRoomSelectionViewModel.swift in Sources */,
+				C7C4AE9029E8319800AFD322 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7C4AE9329E8319800AFD322 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7C4AE9429E8319800AFD322 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7C4AE9829E8319900AFD322 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7C4AE9929E8319900AFD322 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7C4AE9C29E8319900AFD322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7C4AE9D29E8319900AFD322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7C4AE9F29E8319900AFD322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Rental Search/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "arjuna.Rental-Search";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7C4AEA029E8319900AFD322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Rental Search/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "arjuna.Rental-Search";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7C4AE8529E8319800AFD322 /* Build configuration list for PBXProject "Rental Search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7C4AE9C29E8319900AFD322 /* Debug */,
+				C7C4AE9D29E8319900AFD322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7C4AE9E29E8319900AFD322 /* Build configuration list for PBXNativeTarget "Rental Search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7C4AE9F29E8319900AFD322 /* Debug */,
+				C7C4AEA029E8319900AFD322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7C4AE8229E8319800AFD322 /* Project object */;
+}
