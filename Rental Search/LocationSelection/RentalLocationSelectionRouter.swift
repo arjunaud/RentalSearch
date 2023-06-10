@@ -12,7 +12,7 @@ class RentalLocationSelectionRouter: RentalFilterDataProcesserRouterProtocol, Re
 {
     
     var nextRouter: RentalFilterDataProcesserRouterProtocol!
-    let navigationVC: UINavigationController
+    weak var navigationVC: UINavigationController?
 
     
     init(navigationVC: UINavigationController) {
@@ -20,10 +20,11 @@ class RentalLocationSelectionRouter: RentalFilterDataProcesserRouterProtocol, Re
     }
     
     func start(filterData: RentalFilterData) {
+        guard let navigationVC = self.navigationVC else { return }
         let rentalLocationSelectionVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "RentalLocationSelectionViewController") as! RentalLocationSelectionViewController
 
         let rentalLocationSelectionVM = RentalLocationSelectionViewModel(router: self, locationRepo: RentLocationRepo(), rentalFilter: filterData, viewDelegate: rentalLocationSelectionVC)
         rentalLocationSelectionVC.viewModel = rentalLocationSelectionVM
-        self.navigationVC.pushViewController(rentalLocationSelectionVC, animated: true)
+        navigationVC.pushViewController(rentalLocationSelectionVC, animated: true)
     }
 }

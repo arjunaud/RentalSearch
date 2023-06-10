@@ -15,7 +15,7 @@ import UIKit
 
 @MainActor class StartupRouter : StartupRouterProtocol
 {
-    let window: UIWindow
+    weak var window: UIWindow?
     
     init(window: UIWindow)
     {
@@ -23,18 +23,18 @@ import UIKit
     }
     
     func start() {
-        
-        
+        guard let window = self.window else { return }
         let startupViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "StartupViewController") as! StartupViewController
         let startupViewModel = StartupViewModel(router: self, variantRepo: ABVAriantRepo(), viewDelegate: startupViewController)
         startupViewController.viewModel = startupViewModel
-        self.window.rootViewController = startupViewController
+        window.rootViewController = startupViewController
     }
         
     func gotoRentalWizard(with variant: ABVariant) {
+        guard let window = self.window else { return }
         let navigationVC = UINavigationController()
         let rentalWizard : RentalWizardRouter = RentalWizardRouter(navigationController: navigationVC, variant: variant)
-        self.window.rootViewController = navigationVC
+        window.rootViewController = navigationVC
         rentalWizard.start()
     }
 }

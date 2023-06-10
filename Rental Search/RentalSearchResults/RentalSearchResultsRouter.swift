@@ -10,17 +10,18 @@ import UIKit
 
 class RentalSearchResultsRouter: RentalFilterDataProcesserRouterProtocol
 {
-    let navigationVC: UINavigationController
+    weak var navigationVC: UINavigationController?
     
     init(navigationVC: UINavigationController) {
         self.navigationVC = navigationVC
     }
     
     func start(filterData: RentalFilterData) {
+        guard let navigationVC = self.navigationVC else { return }
         let rentalSearchResultsVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "RentalSearchResultsViewController") as! RentalSearchResultsViewController
 
         let rentalSearchResultsVM = RentalSearchResultsViewModel(router: self, searchResultsRepo: RentalSearchResultsRepo(), rentalFilter: filterData, viewDelegate: rentalSearchResultsVC)
         rentalSearchResultsVC.viewModel = rentalSearchResultsVM
-        self.navigationVC.pushViewController(rentalSearchResultsVC, animated: true)
+        navigationVC.pushViewController(rentalSearchResultsVC, animated: true)
     }
 }

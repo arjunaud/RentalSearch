@@ -11,7 +11,7 @@ class RentRoomSelectionRouter: RentalFilterDataProcesserRouterProtocol, RentalFi
 {
     var nextRouter: RentalFilterDataProcesserRouterProtocol!
     
-    let navigationVC: UINavigationController
+    weak var navigationVC: UINavigationController?
     
     init(navigationVC: UINavigationController) {
         self.navigationVC = navigationVC
@@ -19,9 +19,10 @@ class RentRoomSelectionRouter: RentalFilterDataProcesserRouterProtocol, RentalFi
     
     
     func start(filterData: RentalFilterData) {
+        guard let navigationVC = self.navigationVC else { return }
         let rentalRoomSelectionVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "RentalRoomSelectionViewController") as! RentalRoomSelectionViewController
         let rentalRoomSelectionVM = RentRoomSelectionViewModel(router: self, rentalFilter: filterData, viewDelegate: rentalRoomSelectionVC)
         rentalRoomSelectionVC.viewModel = rentalRoomSelectionVM
-        self.navigationVC.pushViewController(rentalRoomSelectionVC, animated: true)
+       navigationVC.pushViewController(rentalRoomSelectionVC, animated: true)
     }
 }
