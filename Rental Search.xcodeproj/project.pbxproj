@@ -14,7 +14,6 @@
 		C73AE7152A2F5A420093F95C /* RentalSearchResultViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AE7142A2F5A420093F95C /* RentalSearchResultViewCell.swift */; };
 		C7608CF929EB1258009F909B /* RentalWizardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608CF829EB1258009F909B /* RentalWizardRouter.swift */; };
 		C7608CFB29ED45D9009F909B /* RentalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608CFA29ED45D9009F909B /* RentalData.swift */; };
-		C7608CFF29ED4853009F909B /* RentRangeSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608CFE29ED4853009F909B /* RentRangeSelectionRouter.swift */; };
 		C7608D0129ED48A4009F909B /* RentRoomSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D0029ED48A4009F909B /* RentRoomSelectionRouter.swift */; };
 		C7608D0329ED57E0009F909B /* RentalSearchResultsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D0229ED57E0009F909B /* RentalSearchResultsRouter.swift */; };
 		C7608D0929ED95FD009F909B /* RentLocationRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7608D0829ED95FD009F909B /* RentLocationRepo.swift */; };
@@ -250,7 +249,6 @@
 				C7608CFB29ED45D9009F909B /* RentalData.swift in Sources */,
 				C73AE7132A2F59A70093F95C /* RentalSearchResultsRepo.swift in Sources */,
 				C73AE70F2A2F58F70093F95C /* RentalSearchResult.swift in Sources */,
-				C7608CFF29ED4853009F909B /* RentRangeSelectionRouter.swift in Sources */,
 				C7608CF929EB1258009F909B /* RentalWizardRouter.swift in Sources */,
 				C7C4AEA429E833C400AFD322 /* Router.swift in Sources */,
 				C7608D2029FEACE9009F909B /* StartupViewController.swift in Sources */,
