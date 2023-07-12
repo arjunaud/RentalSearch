@@ -42,7 +42,6 @@ class RentalWizardRouter: RouterProtocol {
         case .A:
             let rentRoomSelectionRouter = RentRoomSelectionRouter(navigationVC: self.navigationVC, nextRouter: rentalSearchResultsRouter)
             let rentLocationSelectionRouter = RentalLocationSelectionRouter(navigationVC: self.navigationVC, nextRouter: rentRoomSelectionRouter)
-            rentRoomSelectionRouter.nextRouter = rentalSearchResultsRouter
             rentLocationSelectionRouter.start(filterData: rentalFilterData)
             break
             //B: Rooms -> Location -> Results
