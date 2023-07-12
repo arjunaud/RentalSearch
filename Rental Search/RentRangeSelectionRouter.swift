@@ -9,12 +9,13 @@ import UIKit
 
 class RentRangeSelectionRouter: RentalFilterDataProcesserRouterProtocol, RentalFilterRouterProtocol
 {
-    var nextRouter: RentalFilterDataProcesserRouterProtocol!
+    var nextRouter: RentalFilterDataProcesserRouterProtocol
     
     let navigationVC: UINavigationController
     
-    init(navigationVC: UINavigationController) {
+    init(navigationVC: UINavigationController, nextRouter: RentalFilterDataProcesserRouterProtocol) {
         self.navigationVC = navigationVC
+        self.nextRouter = nextRouter
     }
     
     func start(filterData: RentalFilterData) {

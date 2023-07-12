@@ -11,12 +11,13 @@ import UIKit
 class RentalLocationSelectionRouter: RentalFilterDataProcesserRouterProtocol, RentalFilterRouterProtocol
 {
     
-    var nextRouter: RentalFilterDataProcesserRouterProtocol!
+    var nextRouter: RentalFilterDataProcesserRouterProtocol
     weak var navigationVC: UINavigationController?
 
     
-    init(navigationVC: UINavigationController) {
+    init(navigationVC: UINavigationController, nextRouter: RentalFilterDataProcesserRouterProtocol) {
         self.navigationVC = navigationVC
+        self.nextRouter = nextRouter
     }
     
     func start(filterData: RentalFilterData) {

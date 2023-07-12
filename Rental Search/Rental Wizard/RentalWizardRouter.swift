@@ -13,7 +13,7 @@ protocol RentalFilterDataProcesserRouterProtocol {
 }
 
 protocol RentalFilterRouterProtocol {
-    var nextRouter: RentalFilterDataProcesserRouterProtocol! { get set }
+    var nextRouter: RentalFilterDataProcesserRouterProtocol { get }
 }
 
 extension RentalFilterRouterProtocol {
@@ -34,22 +34,21 @@ class RentalWizardRouter: RouterProtocol {
     
     func start() {
         let rentalFilterData = RentalFilterData()
-        let rentLocationSelectionRouter: RentalLocationSelectionRouter =  RentalLocationSelectionRouter(navigationVC: self.navigationVC)
-        let rentRoomSelectionRouter: RentRoomSelectionRouter =  RentRoomSelectionRouter(navigationVC: self.navigationVC)       
         let rentalSearchResultsRouter: RentalSearchResultsRouter = RentalSearchResultsRouter(navigationVC: self.navigationVC)
         
         switch variant
         {
             //A: Location -> Rooms -> Results
         case .A:
-            rentLocationSelectionRouter.nextRouter = rentRoomSelectionRouter
+            let rentRoomSelectionRouter = RentRoomSelectionRouter(navigationVC: self.navigationVC, nextRouter: rentalSearchResultsRouter)
+            let rentLocationSelectionRouter = RentalLocationSelectionRouter(navigationVC: self.navigationVC, nextRouter: rentRoomSelectionRouter)
             rentRoomSelectionRouter.nextRouter = rentalSearchResultsRouter
             rentLocationSelectionRouter.start(filterData: rentalFilterData)
             break
             //B: Rooms -> Location -> Results
         case .B:
-            rentRoomSelectionRouter.nextRouter = rentLocationSelectionRouter
-            rentLocationSelectionRouter.nextRouter = rentalSearchResultsRouter
+            let rentLocationSelectionRouter = RentalLocationSelectionRouter(navigationVC: self.navigationVC, nextRouter: rentalSearchResultsRouter)
+            let rentRoomSelectionRouter = RentRoomSelectionRouter(navigationVC: self.navigationVC, nextRouter: rentLocationSelectionRouter)
             rentRoomSelectionRouter.start(filterData: rentalFilterData)
             break
         }

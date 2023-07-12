@@ -9,12 +9,13 @@ import UIKit
 
 class RentRoomSelectionRouter: RentalFilterDataProcesserRouterProtocol, RentalFilterRouterProtocol
 {
-    var nextRouter: RentalFilterDataProcesserRouterProtocol!
+    var nextRouter: RentalFilterDataProcesserRouterProtocol
     
     weak var navigationVC: UINavigationController?
     
-    init(navigationVC: UINavigationController) {
+    init(navigationVC: UINavigationController, nextRouter: RentalFilterDataProcesserRouterProtocol) {
         self.navigationVC = navigationVC
+        self.nextRouter = nextRouter
     }
     
     
