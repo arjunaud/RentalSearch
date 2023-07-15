@@ -31,7 +31,7 @@ class RentalLocationSelectionViewModel {
     
     private let router: RentalFilterRouterProtocol
     private let locationRepo: RentLocationRepoProtocol
-    private weak var viewDelegate: RentalLocationSelectionViewModelDelegate!
+    private weak var viewDelegate: RentalLocationSelectionViewModelDelegate?
     
     private(set) var locationCellModels: [LocationCellModel] = []
     private var selectedLocationIndex: Int = 0
@@ -46,32 +46,33 @@ class RentalLocationSelectionViewModel {
     }
     
     @MainActor func handleViewReady() {
-        self.viewDelegate.setNavigationTitle(title: "Location")
+        guard  let viewDelegate = self.viewDelegate else { return }
+        viewDelegate.setNavigationTitle(title: "Location")
         Task {
             do  {
-                self.viewDelegate.showLoadingIndicator()
-                self.viewDelegate.disableNextButton()
+                viewDelegate.showLoadingIndicator()
+                viewDelegate.disableNextButton()
                 let locations = try await self.locationRepo.fetchLocations()
                 guard !locations.isEmpty else {
-                    self.viewDelegate.showErrorAlert(message: "No Locations Found")
+                    viewDelegate.showErrorAlert(message: "No Locations Found")
                     return
                 }
                 self.locationCellModels = locations.map({ location in
                     return LocationCellModel(location: location)
                 })
-                self.viewDelegate.displayLocations()
-                self.viewDelegate.enableNextButton()
+                viewDelegate.displayLocations()
+                viewDelegate.enableNextButton()
             }
             catch RentLocationRepoError.NetworkError {
-                self.viewDelegate.showErrorAlert(message: "Internet or server is down")
+               viewDelegate.showErrorAlert(message: "Internet or server is down")
             }
             catch RentLocationRepoError.ServerError {
-                self.viewDelegate.showErrorAlert(message: "Error while retrieving data from server")
+               viewDelegate.showErrorAlert(message: "Error while retrieving data from server")
             }
             catch {
-                self.viewDelegate.showErrorAlert(message: "Unkown error. Please try later")
+                viewDelegate.showErrorAlert(message: "Unkown error. Please try later")
             }
-            self.viewDelegate.hideLoadingIndicator()
+            viewDelegate.hideLoadingIndicator()
         }
     }
     
