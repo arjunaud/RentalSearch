@@ -29,7 +29,7 @@ class LocationCellModel
 
 class RentalLocationSelectionViewModel {
     
-    private let router: RentalFilterRouterProtocol
+    private let router: any RentalFilterRouterProtocol
     private let locationRepo: RentLocationRepoProtocol
     private weak var viewDelegate: RentalLocationSelectionViewModelDelegate?
     
@@ -37,7 +37,7 @@ class RentalLocationSelectionViewModel {
     private var selectedLocationIndex: Int = 0
     private var rentalFilterData: RentalFilterData
     
-    init(router: RentalFilterRouterProtocol, locationRepo: RentLocationRepoProtocol, rentalFilter: RentalFilterData, viewDelegate: RentalLocationSelectionViewModelDelegate)
+    init(router: any RentalFilterRouterProtocol, locationRepo: RentLocationRepoProtocol, rentalFilter: RentalFilterData, viewDelegate: RentalLocationSelectionViewModelDelegate)
     {
         self.router = router
         self.locationRepo = locationRepo

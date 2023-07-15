@@ -14,7 +14,7 @@ protocol RentalRoomSelectionViewModelDelegate: AnyObject {
 
 class RentRoomSelectionViewModel
 {
-    let router: RentalFilterRouterProtocol
+    let router: any RentalFilterRouterProtocol
     let rentalFilterData: RentalFilterData
     private weak var viewDelegate: RentalRoomSelectionViewModelDelegate!
     
@@ -22,7 +22,7 @@ class RentRoomSelectionViewModel
     
     private var selectedRow = 0
     
-    init(router: RentalFilterRouterProtocol,  rentalFilter: RentalFilterData, viewDelegate: RentalRoomSelectionViewModelDelegate) {
+    init(router: any RentalFilterRouterProtocol,  rentalFilter: RentalFilterData, viewDelegate: RentalRoomSelectionViewModelDelegate) {
         self.router = router
         self.rentalFilterData = rentalFilter
         self.viewDelegate = viewDelegate

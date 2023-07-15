@@ -13,7 +13,8 @@ protocol RentalFilterDataProcesserRouterProtocol {
 }
 
 protocol RentalFilterRouterProtocol {
-    var nextRouter: RentalFilterDataProcesserRouterProtocol { get }
+    associatedtype NextRouter: RentalFilterDataProcesserRouterProtocol
+    var nextRouter: NextRouter { get }
 }
 
 extension RentalFilterRouterProtocol {
